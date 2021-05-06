@@ -15,7 +15,6 @@ function App() {
     e.preventDefault();
     if (!info.id) {
       const inpRef = firebase.database().ref("contact");
-      console.log(info);
       inpRef.push(info);
     } else {
       const contactRef = firebase.database().ref("contact").child(info.id);
@@ -25,8 +24,6 @@ function App() {
   };
 
   const editHandler = (id, username, phoneNumber, gender) => {
-    console.log("Appjs");
-    console.log("editHandler", id, username, phoneNumber, gender);
     setInfo({
       id: id,
       username: username,
