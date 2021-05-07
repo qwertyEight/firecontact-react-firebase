@@ -24,7 +24,7 @@ function App() {
       inpRef.push(info);
       succesNotify("Added Successfully!");
     }
-    setInfo({ username: "", phoneNumber: "", gender: "" });
+    setInfo({ username: "", phoneNumber: "", gender: "No Info!" });
   };
 
   const editHandler = (id, username, phoneNumber, gender) => {
