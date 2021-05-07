@@ -59,6 +59,7 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
               placeholder="Name"
               value={info.username}
               onChange={handleInputChange}
+              required
             />
             <Form.Input
               fluid
@@ -69,6 +70,7 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
               type="text"
               value={info.phoneNumber}
               onChange={handleInputChange}
+              required
             />
             <Form.Dropdown
               options={options}
@@ -77,6 +79,7 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
               fluid
               selection
               value={info.gender.toLowerCase()}
+              required
             />
             <Button color="teal" fluid size="large">
               Add

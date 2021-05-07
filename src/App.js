@@ -8,17 +8,17 @@ function App() {
   const [info, setInfo] = useState({
     username: "",
     phoneNumber: "",
-    gender: "",
+    gender: "No Info!",
   });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!info.id) {
-      const inpRef = firebase.database().ref("contact");
-      inpRef.push(info);
-    } else {
+    if (info.id) {
       const contactRef = firebase.database().ref("contact").child(info.id);
       contactRef.update(info);
+    } else {
+      const inpRef = firebase.database().ref("contact");
+      inpRef.push(info);
     }
     setInfo({ username: "", phoneNumber: "", gender: "" });
   };
