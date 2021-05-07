@@ -35,7 +35,7 @@ const Contacts = ({ editHandler }) => {
         justifyContent: "center",
       }}
     >
-      <h2>Contacts</h2>
+      <h2 style={{ fontFamily: "Girassol" }}>Contacts</h2>
       <Table size={"large"} style={{ minWidth: "500px" }}>
         <Table.Header>
           <Table.Row>

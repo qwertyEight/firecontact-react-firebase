@@ -24,13 +24,7 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
     <Grid textAlign="center" verticalAlign="middle">
       <Grid.Column style={{ width: 300 }}>
         <div className="ui piled segments">
-          <div
-            className="ui segment"
-            style={{
-              textDecoration: "none",
-              fontSize: "1.5rem",
-            }}
-          >
+          <div className="ui segment brand">
             <a
               href="https://github.com/edwardBenedict"
               target="_blank"
@@ -39,14 +33,17 @@ const CustomForm = ({ info, setInfo, handleFormSubmit }) => {
                 fontSize: "2rem",
               }}
             >
-              <code style={{ fontWeight: "bold", fontStyle: "italic" }}>
-                {"<ed8en/> "}
-              </code>
+              <code>{"<ed8en/> "}</code>
             </a>
-            <span>design</span>
+            <span className="design header">design</span>
           </div>
         </div>
-        <Header as="h2" textAlign="center">
+        <Header
+          as="h2"
+          textAlign="center"
+          style={{ fontFamily: "Girassol" }}
+          className="add-contact-header"
+        >
           Add Contact
         </Header>
         <Form size="large" onSubmit={handleFormSubmit}>
